@@ -1,0 +1,6 @@
+include README.md
+include LICENSE.txt
+include MANIFEST.in
+recursive-include kecupuapp_base/media *
+recursive-include kecupuapp_base/templates *
+recursive-include docs *
