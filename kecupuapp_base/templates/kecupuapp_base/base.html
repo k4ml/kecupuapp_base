@@ -52,9 +52,13 @@
             {% endif %}
 
             {% if user.is_authenticated %}
+            {% block main-nav-title %}
             <h2>Main</h2>
+            {% endblock %}
                 <ul>
+                {% block main-nav %}
                     <li><a href="/">Home</a></li>
+                {% endblock %}
                 </ul>
             {% endif %}
         </div>
