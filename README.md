@@ -42,3 +42,10 @@ Above command would correctly copy all the static files to the specified `STATIC
     )
 
 '' empty string mean we copy the files to the root of static root dir. 
+
+Ref:- 
+* http://django-staticfiles.readthedocs.org/index.html
+
+TODO
+====
+`django-staticfiles` seem to already have it own context_processors that defined `STATIC_URL` together with urlpatterns to be used for serving static content during development. Use this instead of custom code.
