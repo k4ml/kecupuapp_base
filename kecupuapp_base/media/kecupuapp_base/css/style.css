@@ -1,0 +1,85 @@
+#hd {
+    background: #bdc;
+}
+
+.right-bar {
+    background: #bdc;
+    padding: 3px;
+}
+
+.site-title {
+}
+
+.clear {
+    clear: both;
+}
+
+.welcome-user {
+    background: #7b8;
+}
+
+.right {
+    text-align: right;
+}
+
+.content {
+    padding-top: 5px;
+}
+
+#order-customer {
+    background: #ede;
+    padding-bottom: 1px;
+}
+
+#order-item-search {
+    margin-top: 3px;
+    padding-bottom: 3px;
+}
+
+#order-item-list-tbl {
+    width: 100%;
+}
+
+div.content-wrapper {
+    margin-top: 3px;
+}
+
+.info, .success, .warning, .error {
+    border: 1px solid;
+    margin: 10px 0px;
+    padding: 15px 10px 15px 50px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
+
+.error {
+    color: #D8000C;
+    background-color: #FFBABA;
+    background-image: url('error.png');
+}
+
+.info {
+    color: #00529B;
+    background-color: #BDE5F8;
+    background-image: url('info.png');
+}
+.success {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+    background-image:url('success.png');
+}
+.warning {
+    color: #9F6000;
+    background-color: #FEEFB3;
+    background-image: url('warning.png');
+}
+
+fieldset {
+    border: 1px solid;
+    padding: 1em;
+}
+
+legend {
+    padding: 0.2em 0.5em;
+    border: 1px solid;
+}

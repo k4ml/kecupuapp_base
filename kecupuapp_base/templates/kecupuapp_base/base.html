@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<title>kecupu.base</title>
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}kecupuapp_base/css/reset-fonts-grids.css">
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}kecupuapp_base/css/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}kecupuapp_base/css/base.css">
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}kecupuapp_base/css/style.css">
+</head>
+<body>
+<div id="doc3" class="{{ BASE_SIDEBAR }}">
+    <div id="hd">
+        <!-- PUT MASTHEAD CODE HERE -->
+        <h1 class="site-title">kecupu.base</h1>
+        <div class="welcome-user">
+            <div class="right">
+            {% if user.is_authenticated %}
+                Welcome, {{ user.username }} [<a href="{% url kecupuapp_base:logout %}">logout</a>]
+            {% else %}
+                Welcome new user, <a href="{% url kecupuapp_base:login %}">login</a>.
+            {% endif %}
+            </div>
+        </div>
+    </div>
+    <div id="bd">
+        <div id="yui-main">
+            <div class="yui-b">
+                <!-- PUT MAIN COLUMN CODE HERE -->
+                {% block page_title %}
+                <h2>{{ page_title }}</h2>
+                {% endblock %}
+                <ul class="messages">
+                    {% for message in messages %}
+                    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+                <div class="content">
+                    <div id="main-nav">
+                    </div>
+                {% block content %}
+                {% endblock %}
+                </div>
+            </div>
+        </div>
+        <div class="yui-b right-bar">
+            <!-- PUT SECONDATY COLUMN CODE HERE -->
+            {% if user.is_authenticated %}
+            <h2>Info</h2>
+            {% endif %}
+
+            {% if user.is_authenticated %}
+            <h2>Main</h2>
+                <ul>
+                    <li><a href="">Menu</a></li>
+                </ul>
+            {% endif %}
+        </div>
+        </div>
+    <div id="ft">
+        <!-- PUT FOOTER CODE HERE -->
+    </div>
+</div>
+<script src="{{ STATIC_URL }}kecupuapp_base/js/jquery-1.4.2.min.js"></script>
+<script src="{{ STATIC_URL }}kecupuapp_base/js/jquery-ui-1.8.5.custom.min.js"></script>
+</body>
+</html>
