@@ -44,12 +44,12 @@ div.content-wrapper {
     margin-top: 3px;
 }
 
-.info, .success, .warning, .errorlist {
-    /*border: 1px solid;
+.info, .success, .warning {
+    border: 1px solid;
     margin: 10px 0px;
     padding: 15px 10px 15px 50px;
     background-repeat: no-repeat;
-    background-position: 10px center;*/
+    background-position: 10px center;
 }
 
 .errorlist {
