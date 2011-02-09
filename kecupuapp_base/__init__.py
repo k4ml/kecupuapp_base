@@ -1,4 +1,5 @@
 from django.http import HttpResponse
+from django.template import add_to_builtins
 
 class BaseSite:
 
@@ -37,3 +38,7 @@ class BaseSite:
     urls = property(urls)
     
 basesite = BaseSite()
+
+# add base_filters to all templates instead of calling
+# {% load base_filters %} in each templates.
+add_to_builtins('kecupuapp_base.templatetags.base_filters')
