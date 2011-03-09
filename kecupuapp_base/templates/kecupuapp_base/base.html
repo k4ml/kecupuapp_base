@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <meta name="keywords" content="">
 <meta name="description" content="">
-<title>kecupu.base</title>
+<title>{% block head-title %}kecupu.base{% endblock %}</title>
 <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}kecupuapp_base/css/reset-fonts-grids.css">
 <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}kecupuapp_base/css/jquery-ui.css">
 <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}kecupuapp_base/css/base.css">
@@ -14,7 +14,7 @@
 <div id="doc3" class="{{ BASE_SIDEBAR }}">
     <div id="hd">
         <!-- PUT MASTHEAD CODE HERE -->
-        <h1 class="site-title">kecupu.base</h1>
+        <h1 class="site-title">{% block site-title %}kecupu.base{% endblock %}</h1>
         <div class="welcome-user">
             <div class="right">
             {% if user.is_authenticated %}
