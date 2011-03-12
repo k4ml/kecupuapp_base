@@ -1,3 +1,8 @@
+"""
+This would be abandon for now until I know a better way 
+to use class based views safely.
+"""
+
 from django.http import HttpResponse
 from django.template import add_to_builtins
 
