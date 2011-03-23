@@ -14,7 +14,7 @@
 <div id="doc3" class="{{ BASE_SIDEBAR }}">
     <div id="hd">
         <!-- PUT MASTHEAD CODE HERE -->
-        <h1 class="site-title">{% block site-title %}kecupu.base{% endblock %}</h1>
+        <h1 class="site-title">{% block site-title %}{% if site_title %}{{ site_title }}{% else %}kecupuapp.base{% endif %}{% endblock %}</h1>
         <div class="welcome-user">
             <div class="right">
             {% if user.is_authenticated %}
