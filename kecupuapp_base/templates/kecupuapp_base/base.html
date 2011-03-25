@@ -45,6 +45,7 @@
                 </div>
             </div>
         </div>
+        {% if user.is_authenticated %}
         <div class="yui-b right-bar">
             <!-- PUT SECONDATY COLUMN CODE HERE -->
             {% if user.is_authenticated %}
@@ -62,6 +63,7 @@
                 </ul>
             {% endif %}
         </div>
+        {% endif %}
         </div>
     <div id="ft">
         <!-- PUT FOOTER CODE HERE -->
