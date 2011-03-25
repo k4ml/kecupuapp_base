@@ -1,5 +1,7 @@
 #hd {
     background: #bdc;
+    background: #007ba7;
+    background: #466fd5;
 }
 
 .right-bar {
@@ -8,14 +10,50 @@
 }
 
 .site-title {
+    padding-top: 10px;
+    color: #F7F7F8;
+    font-size: 1.7em;
 }
 
 .clear {
     clear: both;
 }
 
-.welcome-user {
+#navbar {
     background: #7b8;
+    background: #005573;
+    background: #2a4380;
+    background: #4a2a82;
+    color: #F7F7F8;
+    min-height: 100%;
+    font-size: 1.5em;
+}
+
+#navbar ul {
+    margin-left: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#navbar li {
+    display: inline;
+}
+
+#navbar li a {
+    text-decoration: none;
+    width: 100px;
+    background: #005573;
+    background: #6c8cd5;
+    color: #eee;
+    text-align: center;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+#navbar li a:hover {
+    background: #a2b3a1;
+    background: #4671d5;
+    color: #000;
 }
 
 .right {

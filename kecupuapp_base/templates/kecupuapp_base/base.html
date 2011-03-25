@@ -15,15 +15,15 @@
     <div id="hd">
         <!-- PUT MASTHEAD CODE HERE -->
         <h1 class="site-title">{% block site-title %}{% if site_title %}{{ site_title }}{% else %}kecupuapp.base{% endif %}{% endblock %}</h1>
-        <div class="welcome-user">
-            <div class="right">
-            {% if user.is_authenticated %}
-                Welcome, {{ user.username }} [<a href="{% url kecupuapp_base:logout %}">logout</a>]
-            {% else %}
-                Welcome new user, <a href="{% url kecupuapp_base:login %}">login</a>.
-            {% endif %}
-            </div>
+        {% if user.is_authenticated %}
+        <div id="navbar">
+            <ul>
+                <li><a href="#">Profile</a></li>
+                <li><a href="{% url kecupuapp_base:logout %}">Logout</a></li>
+                <li style="float: right;">Login as {{ user.username }}</li>
+            </ul>
         </div>
+        {% endif %}
     </div>
     <div id="bd">
         <div id="yui-main">
