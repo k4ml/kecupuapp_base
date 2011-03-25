@@ -1,3 +1,8 @@
+/* override base.css */
+h1, h2, h3 {
+    margin: 0px;
+}
+
 #hd {
     background: #bdc;
     background: #007ba7;
@@ -58,8 +63,10 @@
     text-align: right;
 }
 
-.content {
-    padding-top: 5px;
+.content h2 {
+    margin-bottom: 1em;
+    background: #6c8cd5;
+    color: #eee;
 }
 
 #order-customer {
@@ -124,8 +131,10 @@ legend {
 /* block style */
 .block {
     background: #ccccff;
+    margin-bottom: 1em;
 }
 .block h2 {
     background: #6c8cd5;
     text-align: center;
+    color: #eee;
 }
