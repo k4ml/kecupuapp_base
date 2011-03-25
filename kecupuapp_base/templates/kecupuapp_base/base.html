@@ -49,10 +49,14 @@
         <div class="yui-b right-bar">
             <!-- PUT SECONDATY COLUMN CODE HERE -->
             {% if user.is_authenticated %}
+            <div class="block">
             <h2>Info</h2>
+            Some content
+            </div>
             {% endif %}
 
             {% if user.is_authenticated %}
+            <div class="block">
             {% block main-nav-title %}
             <h2>Main</h2>
             {% endblock %}
@@ -61,6 +65,7 @@
                     <li><a href="/">Home</a></li>
                 {% endblock %}
                 </ul>
+            </div>
             {% endif %}
         </div>
         {% endif %}

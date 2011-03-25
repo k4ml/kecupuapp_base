@@ -5,8 +5,6 @@
 }
 
 .right-bar {
-    background: #bdc;
-    padding: 3px;
 }
 
 .site-title {
@@ -121,4 +119,13 @@ fieldset {
 legend {
     padding: 0.2em 0.5em;
     border: 1px solid;
+}
+
+/* block style */
+.block {
+    background: #ccccff;
+}
+.block h2 {
+    background: #6c8cd5;
+    text-align: center;
 }
