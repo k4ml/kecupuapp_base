@@ -37,3 +37,7 @@ clean:
 
 uninstall:
 	cd $(SITE_PACKAGES) && rm -rf $(PACKAGE_NAME)*
+
+prep_ms:
+	rm -rf $(SITE_PACKAGES)/django/conf/locale/ms
+	ln -s `pwd`/translations/ms $(SITE_PACKAGES)/django/conf/locale/ms
