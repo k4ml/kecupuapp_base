@@ -151,3 +151,19 @@ legend {
     width: 300px;
     padding: 50px;
 }
+
+table.datalist {
+}
+
+table.datalist th {
+    background: #EAEAEA;
+    color: #222;
+}
+
+table.datalist td {
+    border-bottom: 1px solid #EAEAEA;
+}
+
+table.datalist tr.even {
+    background: #F8F8F8;
+}
