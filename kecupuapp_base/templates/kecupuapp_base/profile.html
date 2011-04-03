@@ -1,5 +1,6 @@
-{% extends "kecupuapp_base/base_site.html" %}
+{% extends "kecupuapp_base/base.html" %}
 
 {% block content %}
 <h2>Profile</h2>
+<a href="{% url kecupuapp_base:password-change %}">Change password</a>
 {% endblock %}

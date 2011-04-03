@@ -18,7 +18,7 @@
         {% if user.is_authenticated %}
         <div id="navbar">
             <ul>
-                <li><a href="#">Profile</a></li>
+                <li><a href="{% url kecupuapp_base:profile %}">Profile</a></li>
                 <li><a href="{% url kecupuapp_base:logout %}">Logout</a></li>
                 <li style="float: right;">Login as {{ user.username }}</li>
             </ul>
