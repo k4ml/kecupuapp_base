@@ -19,6 +19,18 @@ Base Django app with login/logout functionality. The premise is, to start new Dj
 
 4. Enable template context processor `kecupuapp_base.context_processors.base_site`.
 
+<pre>
+TEMPLATE_CONTEXT_PROCESSORS = (
+    "django.contrib.auth.context_processors.auth",
+    "django.core.context_processors.debug",
+    "django.core.context_processors.i18n",
+    "django.core.context_processors.media",
+    "django.contrib.messages.context_processors.messages",
+    'staticfiles.context_processors.static_url',
+    'kecupuapp_base.context_processors.base_site',
+)
+</pre>
+
 Static Files
 ============
 Use `django-staticfiles==0.3.4` app to easily manage static files. `kecupuapp_base.context_processors.base_site` defined template variables named `STATIC_URL` which default to `/static/`.
