@@ -21,7 +21,7 @@ Base Django app with login/logout functionality. The premise is, to start new Dj
 
 Static Files
 ============
-Use `django-staticfiles` app to easily manage static files. `kecupuapp_base.context_processors.base_site` defined template variables named `STATIC_URL` which default to `/static/`.
+Use `django-staticfiles==0.3.4` app to easily manage static files. `kecupuapp_base.context_processors.base_site` defined template variables named `STATIC_URL` which default to `/static/`.
 
 Define `STATIC_ROOT` in settings.py.
 
@@ -39,7 +39,17 @@ Above command would correctly copy all the static files to the specified `STATIC
         ('', os.path.join(os.path.dirname(__file__), 'media')),
     )
 
-'' empty string mean we copy the files to the root of static root dir. 
+'' empty string mean we copy the files to the root of static root dir.
+
+To serve the static files through dev server, add to the urls.py:-
+
+<pre>
+if settings.DEBUG:
+    urlpatterns += patterns('',
+        (r'^static/(?P<path>.*)$', 'django.views.static.serve',
+                {'document_root': settings.STATIC_ROOT}),
+    )
+</pre>
 
 Ref:- 
 * http://django-staticfiles.readthedocs.org/index.html
@@ -47,3 +57,9 @@ Ref:-
 TODO
 ====
 `django-staticfiles` seem to already have it own context_processors that defined `STATIC_URL` together with urlpatterns to be used for serving static content during development. Use this instead of custom code.
+
+<pre>
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'staticfiles.context_processors.static_url',
+)
+</pre>
