@@ -10,11 +10,9 @@ Base Django app with login/logout functionality. The premise is, to start new Dj
     cat - >> urls.py
     from django.conf.urls.defaults import *
 
-    from kecupuapp_base import basesite
-
     urlpatterns = patterns('multilevel.views',
         (r'^$', 'index'),
-        (r'^accounts/', include(basesite.urls)),
+        (r'^accounts/', include('kecupuapp_base.urls', namespace='kecupuapp_base', app_name='kecupuapp_base')),
     )
     ^D
 </pre>
