@@ -52,8 +52,10 @@
             <!-- PUT SECONDATY COLUMN CODE HERE -->
             {% if user.is_authenticated %}
             <div class="block">
+            {% block info-box %}
             <h2>Info</h2>
             Some content
+            {% endblock %}
             </div>
             {% endif %}
 
