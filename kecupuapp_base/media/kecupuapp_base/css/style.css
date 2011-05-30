@@ -159,6 +159,9 @@ table.datalist th {
     background: #EAEAEA;
     color: #222;
 }
+table.datalist tr> th {
+    border-bottom: 1px solid #EAEAEA;
+}
 
 table.datalist td {
     border-bottom: 1px solid #EAEAEA;
@@ -166,4 +169,10 @@ table.datalist td {
 
 table.datalist tr.even {
     background: #F8F8F8;
+}
+
+/* form style */
+input {
+    padding: 1px;
+    margin: 1px;
 }
