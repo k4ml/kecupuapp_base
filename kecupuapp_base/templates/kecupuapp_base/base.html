@@ -7,10 +7,12 @@
 <meta name="keywords" content="">
 <meta name="description" content="">
 <title>{% block head-title %}kecupu.base{% endblock %}</title>
+{% block head-style %}
 <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}kecupuapp_base/css/reset-fonts-grids.css">
 <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}kecupuapp_base/css/jquery-ui.css">
 <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}kecupuapp_base/css/base.css">
 <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}kecupuapp_base/css/style.css">
+{% endblock %}
 </head>
 <body>
 <div id="doc3" class="{{ BASE_SIDEBAR }}">
