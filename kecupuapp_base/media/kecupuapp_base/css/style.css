@@ -181,6 +181,8 @@ table.datalist {
 table.datalist th {
     background: #EAEAEA;
     color: #222;
+    border-left: 1px solid #EAEAEA;
+    border-right: 1px solid #EAEAEA;
 }
 table.datalist tr> th {
     border-bottom: 1px solid #EAEAEA;
