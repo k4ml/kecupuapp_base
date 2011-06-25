@@ -1,4 +1,13 @@
 /* override base.css */
+body {
+    background: #dbd8e8;
+}
+div#doc3 {
+    width: 950px;
+    margin: 0px auto;
+    background: white;
+}
+
 h1, h2, h3 {
     margin: 0px;
 }
@@ -7,6 +16,20 @@ h1, h2, h3 {
     background: #bdc;
     background: #007ba7;
     background: #466fd5;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+#bd {
+    padding: 3px;
+}
+
+#ft {
+    background: #bdc;
+    background: #007ba7;
+    background: #466fd5;
+    height: 50px;
+    text-align: center;
 }
 
 .right-bar {
