@@ -176,6 +176,7 @@ legend {
 }
 
 table.datalist {
+    border-top: 1px solid #EAEAEA;
 }
 
 table.datalist th {
