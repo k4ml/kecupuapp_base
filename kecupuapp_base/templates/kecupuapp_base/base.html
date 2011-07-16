@@ -7,12 +7,20 @@
 <meta name="keywords" content="">
 <meta name="description" content="">
 <title>{% block head-title %}kecupu.base{% endblock %}</title>
+
 {% block head-style %}
 <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}kecupuapp_base/css/reset-fonts-grids.css">
-<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}kecupuapp_base/css/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/jquery-ui.css">
 <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}kecupuapp_base/css/base.css">
 <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}kecupuapp_base/css/style.css">
 {% endblock %}
+
+{% block head-js %}
+<script src="{{ STATIC_URL }}js/jquery.min.js"></script>
+<script src="{{ STATIC_URL }}js/jquery-ui.min.js"></script>
+<script src="{{ STATIC_URL }}js/jquery_autocomplete.js"></script>
+{% endblock %}
+
 </head>
 <body>
 <div id="doc3" class="{{ BASE_SIDEBAR }}">
@@ -82,7 +90,5 @@
     {% endblock %}
     </div>
 </div>
-<script src="{{ STATIC_URL }}kecupuapp_base/js/jquery-1.4.2.min.js"></script>
-<script src="{{ STATIC_URL }}kecupuapp_base/js/jquery-ui-1.8.5.custom.min.js"></script>
 </body>
 </html>
