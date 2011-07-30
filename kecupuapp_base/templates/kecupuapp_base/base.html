@@ -29,11 +29,14 @@
         <h1 class="site-title">{% block site-title %}{% if site_title %}{{ site_title }}{% else %}kecupuapp.base{% endif %}{% endblock %}</h1>
         {% if user.is_authenticated %}
         <div id="navbar">
+        {% block navbar %}
             <ul>
+                <li><a href="/">Home</a></li>
                 <li><a href="{% url kecupuapp_base:profile %}">Profile</a></li>
                 <li><a href="{% url kecupuapp_base:logout %}">Logout</a></li>
                 <li style="float: right;">Login as {{ user.username }}</li>
             </ul>
+        {% endblock %}
         </div>
         {% endif %}
     </div>
