@@ -34,7 +34,7 @@
                 <li><a href="/">Home</a></li>
                 <li><a href="{% url kecupuapp_base:profile %}">Profile</a></li>
                 <li><a href="{% url kecupuapp_base:logout %}">Logout</a></li>
-                <li style="float: right;">Login as {{ user.username }}</li>
+                <li style="float: right;">Login as {{ user.username }} {% if user.is_superuser %}[<a href="{% url admin:index %}" style="color: red;">admin site</a>] {% endif %}</li>
             </ul>
         {% endblock %}
         </div>
