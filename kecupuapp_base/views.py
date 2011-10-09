@@ -9,7 +9,7 @@ from django.contrib.auth.decorators import login_required
 from kecupuapp_base.shortcuts import render_response 
 
 def login(request):
-    return auth_login(request, template_name='login.html')
+    return auth_login(request, template_name='kecupuapp_base/login.html')
 
 def logout(request):
     return logout_then_login(request)
