@@ -63,29 +63,25 @@
         {% if user.is_authenticated %}
         <div class="yui-b right-bar">
             <!-- PUT SECONDATY COLUMN CODE HERE -->
-            {% if user.is_authenticated %}
             <div class="block">
-            {% block info-box %}
-            <h2>Info</h2>
-            Some content
-            {% endblock %}
-            </div>
-            {% endif %}
-
-            {% if user.is_authenticated %}
-            <div class="block">
-            {% block main-nav-title %}
-            <h2>Main</h2>
-            {% endblock %}
-                <ul>
-                {% block main-nav %}
-                    <li><a href="/">Home</a></li>
+            {% block sidebar %}
+                {% block info-box %}
+                <h2>Info</h2>
+                Some content
                 {% endblock %}
-                </ul>
+
+                {% block main-nav-title %}
+                <h2>Main</h2>
+                {% endblock %}
+                    <ul>
+                    {% block main-nav %}
+                        <li><a href="/">Home</a></li>
+                    {% endblock %}
+                    </ul>
+            {% endblock sidebar %}
             </div>
-            {% endif %}
         </div>
-        {% endif %}
+        {% endif %}{# user.is_authenticated #}
         </div>
     <div id="ft">
     {% block footer %}
