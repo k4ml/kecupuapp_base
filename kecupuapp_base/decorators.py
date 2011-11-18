@@ -12,8 +12,8 @@ def has_role(role):
     if role not in valid_roles:
         raise InvalidRole
     role = 'is_%s' % role
-    def actual_decorator(func):
-        def wrapped(request, *args, **kwargs):
+    def actual_decorator(views_func):
+        def views_func_wrapper(request, *args, **kwargs):
             if not request.user.is_authenticated():
                 login_url = '%s?next=%s' % (reverse('kecupuapp_base:login'), 
                                             request.path)
@@ -24,8 +24,8 @@ def has_role(role):
                 'is_superuser': request.user.is_superuser,
             }
             if tests[role]:
-                return func(request, *args, **kwargs)
+                return views_func(request, *args, **kwargs)
             else:
                 return HttpResponseForbidden()
-        return functools.wraps(func)(wrapped)
+        return functools.wraps(views_func)(views_func_wrapper)
     return actual_decorator
