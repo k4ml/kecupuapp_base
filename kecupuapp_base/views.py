@@ -12,7 +12,8 @@ def login(request):
     return auth_login(request, template_name='kecupuapp_base/login.html')
 
 def logout(request):
-    return logout_then_login(request)
+    login_url = reverse('kecupuapp_base:login')
+    return logout_then_login(request, login_url=login_url)
 
 @login_required
 def profile(request):
