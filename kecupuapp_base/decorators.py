@@ -1,6 +1,7 @@
 import pdb, functools
 
-from django.http import HttpResponseForbidden
+from django.core.urlresolvers import reverse
+from django.http import HttpResponseForbidden, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 
 class InvalidRole(Exception):
@@ -12,8 +13,12 @@ def has_role(role):
         raise InvalidRole
     role = 'is_%s' % role
     def actual_decorator(func):
-        @login_required
         def wrapped(request, *args, **kwargs):
+            if not request.user.is_authenticated():
+                login_url = '%s?next=%s' % (reverse('kecupuapp_base:login'), 
+                                            request.path)
+                return HttpResponseRedirect(login_url)
+
             tests = {
                 'is_staff': request.user.is_staff,
                 'is_superuser': request.user.is_superuser,
