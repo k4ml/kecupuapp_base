@@ -69,7 +69,6 @@ setup(
     packages = packages,
     data_files = data_files, 
     install_requires = [
-        'Django==1.2.4',
     ],
     #scripts = ['django/bin/django-admin.py'],
     classifiers = ['Development Status :: 3 - Alpha',
